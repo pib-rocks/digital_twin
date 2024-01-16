@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "775cd57fa655e34e0a8b6d93",
+    "documentMicroversion": "6d4a16a129ef66b69eb2d2e9",
+    "elementId": "c1ea5c9f1e1fe59583fcbb1b",
+    "fullConfiguration": "default",
+    "id": "MSmYtrJH1V2CxezL2",
+    "isStandardContent": false,
+    "name": "URDF_Finger_proximal_marked <2>",
+    "partId": "RPMD",
+    "suppressed": false,
+    "type": "Part"
+}

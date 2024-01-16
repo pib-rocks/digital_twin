@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "775cd57fa655e34e0a8b6d93",
+    "documentMicroversion": "6d4a16a129ef66b69eb2d2e9",
+    "elementId": "ae3a27e7ff5a9a15c2de9b18",
+    "fullConfiguration": "default",
+    "id": "MnAM5X+XMAyyPgbry",
+    "isStandardContent": false,
+    "name": "URDF_Ellbow_lower_marker <1>",
+    "partId": "RgIf",
+    "suppressed": false,
+    "type": "Part"
+}

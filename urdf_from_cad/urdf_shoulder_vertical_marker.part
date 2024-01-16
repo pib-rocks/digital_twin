@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "775cd57fa655e34e0a8b6d93",
+    "documentMicroversion": "6d4a16a129ef66b69eb2d2e9",
+    "elementId": "25ca796311b43f4c179b24e5",
+    "fullConfiguration": "default",
+    "id": "MYxHZNuIH/jDdlq4X",
+    "isStandardContent": false,
+    "name": "URDF_Shoulder_vertical_marker <1>",
+    "partId": "RwOD",
+    "suppressed": false,
+    "type": "Part"
+}
