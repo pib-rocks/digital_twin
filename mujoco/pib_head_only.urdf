@@ -1,0 +1,238 @@
+<robot name="pib">
+    <mujoco>
+        <!-- discardvisual is disabled to include both the colliders and the mesh skins-->
+        <!-- fusestatic is disabled to allow collision detection with static parts-->
+        <compiler meshdir="meshes/" discardvisual="false" fusestatic="false"/>
+
+        <!-- filterparent is disabled to allow collision detection with parent links-->
+        <option>
+            <flag filterparent="disable"/>
+        </option> 
+    </mujoco>
+
+    <link name="base_link"></link>
+    <joint name="base_link_to_base" type="fixed">
+        <parent link="base_link" />
+        <child link="a50-neck_housing" />
+        <origin rpy="0.0 0 0" xyz="0 0 0" />
+    </joint>
+    <link name="a50-neck_housing">
+        <visual>
+            <origin xyz="0.11971888691186906295 0.46323513984931374843 0.99096097109622949262"
+                rpy="1.9721522630525295135e-31 9.8607613152626409991e-32 -2.0943951023931948185" />
+            <geometry>
+                <mesh filename="package://pib_head_module/a83-stand-front.stl" />
+            </geometry>
+            <material name="a83-stand-front_material">
+                <color
+                    rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+            </material>
+        </visual>
+        <!-- Shapes for a83-stand-front -->
+        <collision>
+            <origin xyz="0.020125988694263824419 0.40573518006338554764 1.0009609710962295015"
+                rpy="1.8400427133312982369e-31 -1.2148955226807858897e-31 -1.0471977530888869623" />
+            <geometry>
+                <box size="0.050000000000000002776 0.14000000000000001332 0.020000000000000000416" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0.11971888691186904907 0.46323513984680175781 0.99096097109527581104"
+                rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://pib_head_module/a83-stand-front.stl" />
+            </geometry>
+            <material name="a83-stand-front_material">
+                <color
+                    rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+            </material>
+        </visual>
+        <!-- Shapes for a83-stand-front -->
+        <collision>
+            <origin xyz="0.21931176191186901869 0.40573513984680176225 1.0009609710952758199"
+                rpy="0 -0 1.0471973493043078562" />
+            <geometry>
+                <box size="0.050000000000000002776 0.14000000000000001332 0.020000000000000000416" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0.11972018267952463932 0.46323439173750902143 0.99096089699770351089"
+                rpy="-1.3210915155903764221e-32 -2.2009720256975923003e-31 2.2759572004815693301e-15" />
+            <geometry>
+                <mesh filename="package://pib_head_module/a81-stand-back.stl" />
+            </geometry>
+            <material name="a81-stand-back_material">
+                <color
+                    rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+            </material>
+        </visual>
+        <!-- Shapes for a81-stand-back -->
+        <collision>
+            <origin xyz="0.1197201826795244034 0.56573439173750905695 1.0009608969977035198"
+                rpy="-1.3210915155903764221e-32 -2.2009720256975923003e-31 2.2759572004815693301e-15" />
+            <geometry>
+                <box size="0.10000000000000000555 0.15499999999999999889 0.020000000000000000416" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0.11971888691186904907 0.46323513984680175781 1.008960971095275827"
+                rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://pib_head_module/a50-neck_housing.stl" />
+            </geometry>
+            <material name="a50-neck_housing_material">
+                <color
+                    rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+            </material>
+        </visual>
+        <!-- Shapes for a50-neck_housing -->
+        <collision>
+            <origin xyz="0.11971888691186904907 0.46323513984680175781 1.053960971095275756"
+                rpy="0 -0 0" />
+            <geometry>
+                <cylinder length="0.089999999999999996669" radius="0.035000000000000003331" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0.11971911590141257054 0.46323586107332553885 1.0387464656991842737"
+                rpy="0 0 0" />
+            <mass value="0.18111876951565966665" />
+            <inertia ixx="0.00030525479701904703524" ixy="8.135975214172682227e-09"
+                ixz="-4.2037049133108491568e-09" iyy="0.00030526111491189670622"
+                iyz="8.7224014998572288865e-10" izz="0.00035887760835777329609" />
+        </inertial>
+    </link>
+
+    <link name="urdf_head_base">
+        <visual>
+            <origin xyz="0 -0.083390000000000019664 -0.046599999999999974776"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://pib_head_module/urdf_head_base.stl" />
+            </geometry>
+            <material name="urdf_head_base_material">
+                <color
+                    rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+            </material>
+        </visual>
+        <!-- Shapes for urdf_head_base -->
+        <collision>
+            <origin xyz="-0.051200000000000009392 0.035609999999999975007 -0.01459999999999997411"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <box size="0.0080000000000000001665 0.058000000000000002942 0.02999999999999999889" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.011799999999999999725 0.039109999999999978115 -0.01459999999999997411"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <box size="0.0080000000000000001665 0.06500000000000000222 0.02999999999999999889" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.051200000000000009392 0.035609999999999975007 -0.01459999999999997411"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <box size="0.0080000000000000001665 0.058000000000000002942 0.02999999999999999889" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin
+                xyz="-0.00020000000000000572875 0.0016099999999999725642 -0.01459999999999997411"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <box size="0.11000000000000000056 0.010000000000000000208 0.02999999999999999889" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin
+                xyz="-0.00019999999999999878986 -0.0083900000000000224398 -0.01459999999999997411"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <box size="0.080000000000000001665 0.010000000000000000208 0.02999999999999999889" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin
+                xyz="0.00084453312171220429327 0.0054549791054532698054 -0.015012590515738548358"
+                rpy="0 0 0" />
+            <mass value="0.1407332196056315099" />
+            <inertia ixx="6.8301393138811336407e-05" ixy="-3.5603263798047356217e-06"
+                ixz="-1.5702005793078356893e-08" iyy="0.00017143015354827785589"
+                iyz="-8.7198135009501470696e-08" izz="0.00021767956241075918648" />
+        </inertial>
+    </link>
+
+    <link name="urdf_head">
+        <visual>
+            <origin xyz="0.13339000000000006407 0.031599999999999850431 0.055279999999999995808"
+                rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+                <mesh filename="package://pib_head_module/urdf_head.stl" />
+            </geometry>
+            <material name="urdf_head_material">
+                <color
+                    rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+            </material>
+        </visual>
+        <!-- Shapes for urdf_head -->
+        <collision>
+            <origin xyz="0.15089000000000007962 0.063599999999999851097 0.055279999999999995808"
+                rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+                <box size="0.23000000000000000999 0.014999999999999999445 0.2000000000000000111" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.086890000000000064406 0.097599999999999853539 -0.047220000000000011964"
+                rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+                <box size="0.025000000000000001388 0.14299999999999998823 0.13200000000000000622" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.086890000000000064406 0.097599999999999853539 0.15777999999999997582"
+                rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+                <box size="0.025000000000000001388 0.14299999999999998823 0.13200000000000000622" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.086890000000000064406 0.15109999999999984555 0.055279999999999995808"
+                rpy="-1.570796326794896558 -1.570796326794896558 0" />
+            <geometry>
+                <box size="0.23000000000000000999 0.14299999999999998823 0.025000000000000001388" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0.098817021835589963219 0.072010611053783507574 0.055527940061449038156"
+                rpy="0 0 0" />
+            <mass value="0.15000000000000038303" />
+            <inertia ixx="0.0010770836334109677203" ixy="-3.6887597283857953144e-05"
+                ixz="-4.5149123406799000247e-08" iyy="0.0011072239979684648722"
+                iyz="2.8871692117452927309e-06" izz="0.00073482206415244832008" />
+        </inertial>
+    </link>
+
+    <joint name="head_vertical" type="revolute">
+        <origin xyz="-0.055279999999999995808 0.050000000000000044409 -0.0149999999999999023"
+            rpy="-1.570796326794896558 -0 -1.570796326794896558" />
+        <parent link="urdf_head_base" />
+        <child link="urdf_head" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="head_horizontal" type="revolute">
+        <origin xyz="0.11971888691186904907 0.46323513984680175781 1.0997109710952759354"
+            rpy="3.141592653589793116 -0 3.141592653589793116" />
+        <parent link="a50-neck_housing" />
+        <child link="urdf_head_base" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+</robot>
