@@ -1,22 +1,11 @@
 % scale(1000) import("/../meshes/urdf_palm_left.stl");
 
-// Document offsets
-full_width_offset=-55.2;
-full_depth_offset=-155;
-full_height_offset=-47;
+// Upper Part
+translate([-157.5, 0, -101]) {
+    cube([50, 20, 30], center = true);
+}
 
-// Document dimensions
-full_width=110;
-full_depth=93;
-full_height=30;
-
-translate([
-    full_width_offset, 
-    full_depth_offset, 
-    full_height_offset]) {
-        cube([
-            full_width, 
-            full_depth, 
-            full_height], 
-            center = false);
+// Lower Part
+translate([-168, 00, -56]) {
+    cube([30, 20, 50], center = true);
 }
