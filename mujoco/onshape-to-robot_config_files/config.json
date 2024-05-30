@@ -8,6 +8,7 @@
     "robotName": "pib",
     "packageName": "pib_head_module/meshes/",
     "outputFormat": "urdf",
-    "addDummyBaseLink" : "true",
-    "useScads" : "true"
+    "addDummyBaseLink": true,
+    "drawCollisions": false,
+    "useScads": true
 }
