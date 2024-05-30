@@ -1,68 +1,63 @@
 % scale(1000) import("/../meshes/urdf_head.stl");
 
 // Document offsets
-width_offset=-115;
-depth_offset=-145;
-height_offset=-68;
+full_width_offset=-115;
+full_depth_offset=-98;
+full_height_offset=65;
 
 // Document dimensions
 full_width=230;
 full_depth=170;
 full_height=200;
 
-union() {
-    // Front Cover
-    front_cover_depth=155;
-    
-    translate([
-    width_offset, 
-    depth_offset + front_cover_depth, 
-    height_offset]) {
+// Variables
+back_plate_depth_offset = full_depth_offset + 19;
+back_plate_depth = 151;
+
+// Front Head Plate
+translate([
+    full_width_offset, 
+    full_depth_offset, 
+    full_height_offset]) {
         cube([
             full_width, 
-            full_depth - front_cover_depth, 
-            full_height], center = false);
-    };
-    
+            18, 
+            full_height], 
+            center = false);
+};
 
-    // Head Plate Variables
-    head_depth=27;
-    head_height=68;
-    head_plate_thickness=25;
-    
-    // Left Head Plate
-    translate([
-    width_offset,
-    depth_offset + head_depth,
-    height_offset + head_height]) {
+// Left Head Plate
+translate([
+    full_width_offset, 
+    back_plate_depth_offset, 
+    full_height_offset + 70]) {
         cube([
-            head_plate_thickness, 
-            full_depth - head_depth, 
-            full_height - head_height], 
+            25, 
+            back_plate_depth, 
+            130], 
             center = false);
-    }
+}
 
-    // Right Head Plate
-    translate([
-    width_offset + full_width - head_plate_thickness,
-    depth_offset + head_depth,
-    height_offset + head_height]) {
+// Right Head Plate
+translate([
+    full_width_offset + full_width - 25, 
+    back_plate_depth_offset, 
+    full_height_offset + 70]) {
         cube([
-            head_plate_thickness, 
-            full_depth - head_depth, 
-            full_height - head_height], 
+            25, 
+            back_plate_depth, 
+            130], 
             center = false);
-    }
-    
-    // Upper Head Plate
-    translate([
-    width_offset,
-    depth_offset + head_depth,
-    height_offset + full_height - head_plate_thickness]) {
+}
+
+// Top Head Plate
+translate([
+    full_width_offset + 26, 
+    back_plate_depth_offset, 
+    full_height_offset + 175]) {
         cube([
-            full_width, 
-            full_depth - head_depth, 
-            head_plate_thickness], 
+            full_width - (2*26), 
+            back_plate_depth, 
+            25], 
             center = false);
-    }
 }
