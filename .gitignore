@@ -1,2 +1,5 @@
 # Visual Studio Code
 .vscode/
+
+# Docker
+digital_twin_export_pipeline/.env

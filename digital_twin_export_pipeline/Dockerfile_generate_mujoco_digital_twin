@@ -1,0 +1,24 @@
+FROM python:3.9-slim
+
+# Set variables from the .env-file as build arguments
+ARG INPUT_FILES_DIRECTORY=${INPUT_FILES_DIRECTORY}
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Install Python dependencies
+COPY python_scripts/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the python scripts into the container
+COPY python_scripts /app/python_scripts
+
+# Copy the onshape-to-robot config files into the container
+COPY ${INPUT_FILES_DIRECTORY} /app/onshape-to-robot_config_files
+
+# Copy the entrypoint shell script and make it executable
+COPY docker_entrypoint.sh .
+RUN chmod +x docker_entrypoint.sh
+
+# Run the shell script that starts the python scripts
+ENTRYPOINT ["./docker_entrypoint.sh"]

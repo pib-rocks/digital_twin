@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  generate_mujoco_digital_twin:
+
+    build:
+      context: .
+      dockerfile: Dockerfile_generate_mujoco_digital_twin
+
+      # Specifies variables from the .env-file needed at container build time
+      args:
+        INPUT_FILES_DIRECTORY: ${INPUT_FILES_DIRECTORY}
+
+    # Enable all variables from .env to be used during container run time
+    env_file:
+      - path: .env
+        required: true
+
+    container_name: digital-twin-container
+
+    volumes:
+      - digital-twin-export:/app
+
+volumes:
+  digital-twin-export:
