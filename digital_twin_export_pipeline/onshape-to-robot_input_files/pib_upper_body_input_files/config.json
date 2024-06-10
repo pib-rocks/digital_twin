@@ -6,7 +6,7 @@
     "workspaceId": "c131652deccef6ce517f2fe7",
     "assemblyName": "pib-URDF",
     "robotName": "pib",
-    "packageName": "meshes/",
+    "packageName": "pib_upper_body/",
     "outputFormat": "urdf",
     "addDummyBaseLink": true,
     "drawCollisions": false,

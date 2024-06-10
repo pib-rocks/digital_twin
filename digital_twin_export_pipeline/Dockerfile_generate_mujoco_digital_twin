@@ -3,6 +3,9 @@ FROM python:3.9-slim
 # Set variables from the .env-file as build arguments
 ARG INPUT_FILES_DIRECTORY=${INPUT_FILES_DIRECTORY}
 
+# Install OpenSCAD (required for simplified collision models)
+RUN apt-get update && apt-get install -y openscad
+
 # Set the working directory inside the container
 WORKDIR /app
 

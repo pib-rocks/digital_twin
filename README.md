@@ -25,5 +25,5 @@ ONSHAPE_ACCESS_KEY=abcdefghijklmn0123456789
 ONSHAPE_SECRET_KEY=abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKL
 
 # The directory containing the config.json and the optional .scad files for onshape-to-robot
-INPUT_FILES_DIRECTORY=pib_upper_body_input_files/pib_upper_body_export_files
+INPUT_FILES_DIRECTORY=onshape-to-robot_input_files/pib_upper_body_input_files
 ```
