@@ -1,16 +1,20 @@
 # Digital Twin for pib
 
-## Preparations for export
+## Export process
+
+### Preparations for export
 - Docker needs to be installed and started for this script to work.
 
-## How to start the export
-1. Create a file called ".env" in the "digital_twin_export_pipeline" folder
+### How to start the export
+1. Create a file called ".env" in the "digital_twin_export_pipeline" folder (examples are below)
 2. Fill in your OnShape api keys (as shown in the example)
 3. Fill in the name of the input_files folder you want to export (as shown in the example)
 4. Open a terminal in the "digital_twin_export_pipeline" folder
 5. Run this command to start the export: `docker-compose up`
 
-The exported URDF file and meshes should then be extracted to a folder beside the dockerfile
+### Result of the export
+After a few minutes the export should be done.
+The exported URDF file and meshes will be automatically extracted to a folder beside the dockerfile.
 
 
 ## Environment file for docker

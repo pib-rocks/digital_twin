@@ -21,9 +21,23 @@ def insert_element(source_xml_path, target_xml_path, output_xml_path):
     # Save the result as new file
     target_tree.write(output_xml_path)
 
+def apply_xml_formatting(target_xml_path):
+    """Fix indentations and unnecessary empty lines"""
+
+    # Parse the source XML and get the root element
+    source_xml_tree = ET.parse(target_xml_path)
+    root = source_xml_tree.getroot()
+
+    # Apply indentation formatting to the entire XML for better readability
+    ET.indent(root)
+
+    # Overwrite the original unformatted file
+    source_xml_tree.write(target_xml_path)
+
 # File paths
 MUJOCO_HEADER_XML_PATH = "python_scripts/mujoco_header.xml"
 TARGET_XML_PATH = "onshape-to-robot_config_files/robot.urdf"
 OUTPUT_XML_PATH = "onshape-to-robot_config_files/mujoco.urdf"
 
 insert_element(MUJOCO_HEADER_XML_PATH, TARGET_XML_PATH, OUTPUT_XML_PATH)
+apply_xml_formatting(OUTPUT_XML_PATH)
