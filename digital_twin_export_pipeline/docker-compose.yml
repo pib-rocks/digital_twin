@@ -19,7 +19,7 @@ services:
     container_name: digital-twin-container
 
     volumes:
-      - digital-twin-export:/app
+      - ./docker_export:/app/export
 
 volumes:
   digital-twin-export:
