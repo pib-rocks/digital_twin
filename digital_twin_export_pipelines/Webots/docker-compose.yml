@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  generate_mujoco_digital_twin:
+  generate_webots_digital_twin:
 
     build:
       context: .
-      dockerfile: Dockerfile_generate_mujoco_digital_twin
+      dockerfile: Dockerfile_generate_webots_digital_twin
 
       # Specifies variables from the .env-file needed at container build time
       args:
@@ -16,7 +16,7 @@ services:
       - path: .env
         required: true
 
-    container_name: digital-twin-container
+    container_name: digital-twin-webots-container
 
     volumes:
       - ./docker_export:/app/export
