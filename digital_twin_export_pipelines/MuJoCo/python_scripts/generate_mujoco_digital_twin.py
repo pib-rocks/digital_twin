@@ -7,11 +7,11 @@ import subprocess
 # Run the onshape-to-robot export
 try:
     result = subprocess.run(
-        ['onshape-to-robot', '/app/onshape-to-robot_config_files'],
+        ["onshape-to-robot", "/app/onshape-to-robot_config_files"],
         check=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        text=True
+        text=True,
     )
     print(result.stdout)
 

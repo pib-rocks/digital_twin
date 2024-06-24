@@ -4,6 +4,7 @@ This script prepares the exported URDF file to be used in Webots.
 
 import xml.etree.ElementTree as ET
 
+
 def apply_xml_formatting(target_xml_path):
     """Fix indentations and unnecessary empty lines"""
 
@@ -16,6 +17,7 @@ def apply_xml_formatting(target_xml_path):
 
     # Overwrite the original unformatted file
     source_xml_tree.write(OUTPUT_XML_PATH)
+
 
 # File paths
 TARGET_XML_PATH = "onshape-to-robot_config_files/robot.urdf"
