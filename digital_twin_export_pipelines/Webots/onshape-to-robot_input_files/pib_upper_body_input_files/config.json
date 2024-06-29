@@ -1,14 +1,14 @@
 {
-    "onshape_api": "https://cad.onshape.com",
-    "onshape_access_key": "enter_your_access_key_here",
-    "onshape_secret_key": "enter_your_secret_key_here",
-    "documentId": "775cd57fa655e34e0a8b6d93",
-    "workspaceId": "c131652deccef6ce517f2fe7",
-    "assemblyName": "pib-URDF",
-    "robotName": "pib",
-    "packageName": "pib_upper_body/",
-    "outputFormat": "urdf",
-    "addDummyBaseLink": true,
-    "drawCollisions": false,
-    "useScads": true
+  "onshape_api": "https://cad.onshape.com",
+  "onshape_access_key": "enter_your_access_key_here",
+  "onshape_secret_key": "enter_your_secret_key_here",
+  "documentId": "775cd57fa655e34e0a8b6d93",
+  "workspaceId": "fff5b717a5ab3fbb93f6263c",
+  "assemblyName": "pib-URDF",
+  "robotName": "pib",
+  "packageName": "pibsim_webots/protos/resources",
+  "outputFormat": "urdf",
+  "addDummyBaseLink": "true",
+  "simplifystls": "yes",
+  "maxSTLSize": 1
 }

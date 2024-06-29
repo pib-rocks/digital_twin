@@ -4,7 +4,7 @@ FROM python:3.9-slim
 ARG INPUT_FILES_DIRECTORY=${INPUT_FILES_DIRECTORY}
 
 # Install OpenSCAD (required for simplified collision models)
-RUN apt-get update && apt-get install -y openscad
+RUN apt-get update && apt-get install -y openscad meshlab
 
 # Set the working directory inside the container
 WORKDIR /app

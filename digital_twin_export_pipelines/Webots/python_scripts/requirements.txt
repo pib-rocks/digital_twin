@@ -1,5 +1,6 @@
 # Main dependency required for the export
 onshape-to-robot==0.3.25
+urdf2webots==2.0.3
 
 # Sub-dependencies (Output from 'pip freeze' command)
 certifi==2024.2.2
