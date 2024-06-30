@@ -23,5 +23,4 @@ for file in files:
 
 # Move relevant files to exchange directory
 shutil.move(MESHES_DIR, MOUNTED_EXCHANGE_DIR)
-shutil.move(os.path.join(ONSHAPE_TO_ROBOT_DIR, "webots.urdf"), MOUNTED_EXCHANGE_DIR)
 shutil.move(os.path.join(ONSHAPE_TO_ROBOT_DIR, "webots.proto"), MOUNTED_EXCHANGE_DIR)

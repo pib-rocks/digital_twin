@@ -6,7 +6,7 @@
   "workspaceId": "fff5b717a5ab3fbb93f6263c",
   "assemblyName": "pib-URDF",
   "robotName": "pib",
-  "packageName": "pibsim_webots/protos/resources",
+  "packageName": "pibsim_webots/",
   "outputFormat": "urdf",
   "addDummyBaseLink": "true",
   "simplifystls": "yes",

@@ -16,7 +16,7 @@ print_timestamp "Exporting digital twin, this might take a few minutes."
 python ./python_scripts/generate_webots_digital_twin.py
 
 print_timestamp "Edit and format URDF file"
-python ./python_scripts/edit_exported_urdf_file.py
+python ./python_scripts/edit_exported_proto_file.py
 
 print_timestamp "Move all files to export directory"
 python ./python_scripts/move_exported_files.py
