@@ -2,4 +2,5 @@
 .vscode/
 
 # Docker
-digital_twin_export_pipeline/.env
+digital_twin_export_pipelines/MuJoCo/.env
+digital_twin_export_pipelines/Webots/.env
