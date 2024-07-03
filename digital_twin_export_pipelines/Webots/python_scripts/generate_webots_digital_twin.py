@@ -29,7 +29,7 @@ try:
             "-m",
             "urdf2webots.importer",
             "--input=/app/onshape-to-robot_config_files/robot.urdf",
-            "--output=/app/onshape-to-robot_config_files/webots.proto"
+            "--output=/app/onshape-to-robot_config_files/pib.proto"
         ],
         check=True,
         stdout=subprocess.PIPE,

@@ -29,7 +29,7 @@ def edit_proto(target_proto_path):
     # For some reason only the last 25 letters of the 'onshape-to-robot_config_files' file path are appended by urdf2webots
     modified_file_content = modified_file_content.replace(
         "ape-to-robot_config_files/package:/pibsim_webots/",
-        "/home/pib/ros_working_dir/src/pibsim_webots/protos/meshes/",
+        "/home/pib/ros_working_dir/src/pibsim_webots/protos/resources/",
     )
 
     # Replace the info at the beginning of the file
@@ -43,6 +43,6 @@ def edit_proto(target_proto_path):
 
 
 # File paths
-TARGET_PROTO_PATH = "onshape-to-robot_config_files/webots.proto"
+TARGET_PROTO_PATH = "onshape-to-robot_config_files/pib.proto"
 
 edit_proto(TARGET_PROTO_PATH)
