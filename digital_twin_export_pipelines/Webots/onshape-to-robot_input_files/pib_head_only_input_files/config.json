@@ -8,7 +8,7 @@
     "robotName": "pib",
     "packageName": "pibsim_webots/",
     "outputFormat": "urdf",
-    "addDummyBaseLink": "true",
-    "simplifystls": "yes",
+    "addDummyBaseLink": true,
+    "simplifystls": "all",
     "maxSTLSize": 1
 }
