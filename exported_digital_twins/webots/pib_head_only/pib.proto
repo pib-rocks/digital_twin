@@ -1,0 +1,285 @@
+#VRML_SIM R2022b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the pib
+# Extracted from: /app/onshape-to-robot_config_files/robot.urdf
+
+PROTO pib [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "pib"  # Is `Robot.name`.
+  field  SFString    controller      "void" # Is `Robot.controller`.
+  field  MFString    controllerArgs  []     # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""     # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE  # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE   # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE  # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Solid {
+        children [
+          Transform {
+            translation 0.119719 0.463235 0.990961
+            rotation 0.000000 -0.000000 -1.000000 2.094395
+            children [
+              Shape {
+                appearance DEF a83-stand-front_material PBRAppearance {
+                  baseColor 0.901961 0.901961 0.901961
+                  roughness 1.000000
+                  metalness 0
+                }
+                geometry DEF a83-stand-front Mesh {
+                  url "ape-to-robot_config_files/package:/meshes/a83-stand-front.stl"
+                }
+              }
+            ]
+          }
+          Transform {
+            translation 0.119719 0.463235 0.990961
+            children [
+              Shape {
+                appearance USE a83-stand-front_material
+                geometry USE a83-stand-front
+              }
+            ]
+          }
+          Transform {
+            translation 0.119720 0.463234 0.990961
+            children [
+              Shape {
+                appearance DEF a81-stand-back_material PBRAppearance {
+                  baseColor 0.901961 0.901961 0.901961
+                  roughness 1.000000
+                  metalness 0
+                }
+                geometry DEF a81-stand-back Mesh {
+                  url "ape-to-robot_config_files/package:/meshes/a81-stand-back.stl"
+                }
+              }
+            ]
+          }
+          Transform {
+            translation 0.119719 0.463235 1.008961
+            children [
+              Shape {
+                appearance DEF a50-neck_housing_material PBRAppearance {
+                  baseColor 0.901961 0.901961 0.901961
+                  roughness 1.000000
+                  metalness 0
+                }
+                geometry DEF a50-neck_housing Mesh {
+                  url "ape-to-robot_config_files/package:/meshes/a50-neck_housing.stl"
+                }
+              }
+            ]
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.000000 -1.000000
+              anchor 0.119719 0.463235 1.099711
+            }
+            device [
+              RotationalMotor {
+                name "head_horizontal"
+                maxVelocity 20.0
+                maxTorque 10.0
+              }
+              PositionSensor {
+                name "head_horizontal_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.119719 0.463235 1.099711
+              rotation 0.000000 1.000000 0.000000 3.141593
+              children [
+                Transform {
+                  translation 0.000000 -0.083390 -0.046600
+                  rotation 1.000000 0.000000 0.000000 3.141593
+                  children [
+                    Shape {
+                      appearance DEF urdf_head_base_material PBRAppearance {
+                        baseColor 0.901961 0.901961 0.901961
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF urdf_head_base Mesh {
+                        url "ape-to-robot_config_files/package:/meshes/urdf_head_base.stl"
+                      }
+                    }
+                  ]
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 1.000000 0.000000 0.000000
+                    anchor -0.055280 0.050000 -0.015000
+                  }
+                  device [
+                    RotationalMotor {
+                      name "head_vertical"
+                      maxVelocity 20.0
+                      maxTorque 10.0
+                    }
+                    PositionSensor {
+                      name "head_vertical_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation -0.055280 0.050000 -0.015000
+                    rotation -0.577350 0.577350 -0.577350 2.094395
+                    children [
+                      Transform {
+                        translation 0.133390 0.031600 0.055280
+                        rotation -0.577350 -0.577350 -0.577350 2.094395
+                        children [
+                          Shape {
+                            appearance DEF urdf_head_material PBRAppearance {
+                              baseColor 0.901961 0.901961 0.901961
+                              roughness 1.000000
+                              metalness 0
+                            }
+                            geometry DEF urdf_head Mesh {
+                              url "ape-to-robot_config_files/package:/meshes/urdf_head.stl"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                    name "urdf_head"
+                    boundingObject Group {
+                      children [
+                        Transform {
+                          translation 0.150890 0.063600 0.055280
+                          rotation -0.577350 -0.577350 -0.577350 2.094395
+                          children [
+                            Box {
+                               size 0.230000 0.015000 0.200000
+                            }
+                          ]
+                        }
+                        Transform {
+                          translation 0.086890 0.097600 -0.047220
+                          rotation -0.577350 -0.577350 -0.577350 2.094395
+                          children [
+                            Box {
+                               size 0.025000 0.143000 0.132000
+                            }
+                          ]
+                        }
+                        Transform {
+                          translation 0.086890 0.097600 0.157780
+                          rotation -0.577350 -0.577350 -0.577350 2.094395
+                          children [
+                            Box {
+                               size 0.025000 0.143000 0.132000
+                            }
+                          ]
+                        }
+                        Transform {
+                          translation 0.086890 0.151100 0.055280
+                          rotation -0.577350 -0.577350 -0.577350 2.094395
+                          children [
+                            Box {
+                               size 0.230000 0.143000 0.025000
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                    physics Physics {
+                      density -1
+                      mass 0.150000
+                      centerOfMass [ 0.098817 0.072011 0.055528 ]
+                      inertiaMatrix [
+                        1.077084e-03 1.107224e-03 7.348221e-04
+                        -3.688760e-05 -4.514912e-08 2.887169e-06
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "urdf_head_base"
+              boundingObject Transform {
+                translation -0.000200 0.025110 -0.014600
+                rotation 1.000000 0.000000 0.000000 3.141593
+                children [
+                  Box {
+                     size 0.110000 0.093000 0.030000
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 0.140733
+                centerOfMass [ 0.000845 0.005455 -0.015013 ]
+                inertiaMatrix [
+                  6.830139e-05 1.714302e-04 2.176796e-04
+                  -3.560326e-06 -1.570201e-08 -8.719814e-08
+                ]
+              }
+            }
+          }
+        ]
+        name "a50-neck_housing"
+        boundingObject Group {
+          children [
+            Transform {
+              translation 0.020126 0.405735 1.000961
+              rotation 0.000000 -0.000000 -1.000000 1.047198
+              children [
+                Box {
+                   size 0.050000 0.140000 0.020000
+                }
+              ]
+            }
+            Transform {
+              translation 0.219312 0.405735 1.000961
+              rotation 0.000000 0.000000 1.000000 1.047197
+              children [
+                Box {
+                   size 0.050000 0.140000 0.020000
+                }
+              ]
+            }
+            Transform {
+              translation 0.119720 0.565734 1.000961
+              children [
+                Box {
+                   size 0.100000 0.155000 0.020000
+                }
+              ]
+            }
+            Transform {
+              translation 0.119719 0.463235 1.053961
+              children [
+                Cylinder {
+                  radius 0.035
+                  height 0.09
+                }
+              ]
+            }
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 0.181119
+          centerOfMass [ 0.119719 0.463236 1.038746 ]
+          inertiaMatrix [
+            3.052548e-04 3.052611e-04 3.588776e-04
+            8.135975e-09 -4.203705e-09 8.722401e-10
+          ]
+        }
+      }
+    ]
+    name IS name
+  }
+}

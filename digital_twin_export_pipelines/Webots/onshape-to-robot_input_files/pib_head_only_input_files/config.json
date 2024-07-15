@@ -6,9 +6,9 @@
     "versionId": "0dc429b31f6b26e116b59fc0",
     "assemblyName": "URDF2",
     "robotName": "pib",
-    "packageName": "meshes/",
+    "packageName": "pibsim_webots/",
     "outputFormat": "urdf",
-    "addDummyBaseLink": true,
-    "drawCollisions": false,
-    "useScads": true
+    "addDummyBaseLink": "true",
+    "simplifystls": "yes",
+    "maxSTLSize": 1
 }
