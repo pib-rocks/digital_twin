@@ -19,8 +19,5 @@ RUN pip install --no-cache-dir -r /app/python_scripts/requirements.txt
 # Copy the onshape-to-robot config files into the container
 COPY onshape-to-robot_input_files /app/onshape-to-robot_input_files
 
-# Copy the any additional files into the container
-COPY additonal_test_files /app/additonal_test_files
-
 # Run the shell script that starts the python scripts
 ENTRYPOINT ["/bin/bash"]
