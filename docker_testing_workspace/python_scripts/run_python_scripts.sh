@@ -9,8 +9,11 @@ print_timestamp() {
 }
 
 # Run python scripts
-print_timestamp "Setting environment variables"
+print_timestamp "Preparing config file"
 python /app/python_scripts/01_prepare_config_file_for_export.py
 
-print_timestamp "Preparing config file"
+print_timestamp "Export urdf"
 python /app/python_scripts/02_export_urdf_from_onshape.py
+
+print_timestamp "Convert urdf to mjcf"
+python /app/python_scripts/03_convert_urdf_to_mjcf.py
