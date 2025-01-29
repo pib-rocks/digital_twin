@@ -4,3 +4,4 @@
 # Docker
 digital_twin_export_pipelines/MuJoCo/.env
 digital_twin_export_pipelines/Webots/.env
+docker_testing_workspace/.env

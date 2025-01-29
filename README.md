@@ -35,3 +35,7 @@ ONSHAPE_SECRET_KEY=abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKL
 # The directory containing the config.json and the optional .scad files for onshape-to-robot
 INPUT_FILES_DIRECTORY=onshape-to-robot_input_files/pib_upper_body_input_files
 ```
+
+## Commands for building running the testing Dockerfile (from a terminal in the "docker_testing_workspace" folder)
+`docker build -f Dockerfile_docker_testing_workspace -t docker_testing_workspace .`
+`docker run --env-file .env -it docker_testing_workspace`
