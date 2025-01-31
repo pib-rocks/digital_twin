@@ -6,9 +6,8 @@
     "workspaceId": "fff5b717a5ab3fbb93f6263c",
     "assemblyName": "pib-URDF",
     "robotName": "pib",
-    "packageName": "pib_upper_body/",
     "outputFormat": "urdf",
     "addDummyBaseLink": true,
     "drawCollisions": false,
-    "useScads": true
+    "useScads": false
 }
