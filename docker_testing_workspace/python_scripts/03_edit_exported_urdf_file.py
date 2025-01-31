@@ -17,7 +17,7 @@ def insert_element(source_xml_path, target_xml_path, output_xml_path):
     robot_element = target_tree.getroot()
 
     # Insert the MuJoCo element as the first child of the <robot> element
-    # robot_element.insert(0, mujoco_element)
+    robot_element.insert(0, mujoco_element)
 
     # Save the result as new file
     target_tree.write(output_xml_path)
@@ -65,8 +65,8 @@ ONSHAPE_EXPORT_URDF = INPUT_FILES_PATH + "robot.urdf"
 URDF_WITH_MUJOCO_HEADER = INPUT_FILES_PATH + "mujoco_header.urdf"
 ABSOLUTE_PATH_URDF = INPUT_FILES_PATH + "absolute_path.urdf"
 
-#insert_element(MUJOCO_HEADER_XML_PATH, ONSHAPE_EXPORT_URDF, URDF_WITH_MUJOCO_HEADER)
 convert_relative_to_absolute(ONSHAPE_EXPORT_URDF, ABSOLUTE_PATH_URDF, INPUT_FILES_PATH)
+insert_element(MUJOCO_HEADER_XML_PATH, ABSOLUTE_PATH_URDF, URDF_WITH_MUJOCO_HEADER)
 
 
 apply_xml_formatting(ABSOLUTE_PATH_URDF)
