@@ -4,4 +4,5 @@
 # Docker
 digital_twin_export_pipelines/MuJoCo/.env
 digital_twin_export_pipelines/Webots/.env
+digital_twin_export_pipelines/ThreeJS/.env
 docker_testing_workspace/.env
