@@ -2,7 +2,8 @@
 .vscode/
 
 # Docker
-digital_twin_export_pipelines/MuJoCo/.env
-digital_twin_export_pipelines/Webots/.env
-digital_twin_export_pipelines/ThreeJS/.env
+digital_twin_export_pipelines/plain_urdf/.env
+digital_twin_export_pipelines/muJoCo/.env
+digital_twin_export_pipelines/webots/.env
+digital_twin_export_pipelines/threeJS/.env
 docker_testing_workspace/.env
