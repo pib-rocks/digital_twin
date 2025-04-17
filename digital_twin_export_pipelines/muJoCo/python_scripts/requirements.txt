@@ -1,21 +1,23 @@
 # Main dependency required for the export
-onshape-to-robot==0.3.25
+onshape-to-robot==1.5.7
 
-# Testing packages
-urdf2mjcf==0.1.1
+# Dependency for converting between urdf and mjcf
+urdf2mjcf==0.2.22
 
 # Sub-dependencies (Output from 'pip freeze' command)
-certifi==2024.2.2
-charset-normalizer==3.3.2
+certifi==2025.1.31
+charset-normalizer==3.4.1
 colorama==0.4.6
 commentjson==0.9.0
-idna==3.7
+idna==3.10
 lark-parser==0.7.8
-numpy==1.26.4 # downgraded from numpy 2.0.0 because of breaking changes
-numpy-stl==3.1.1
-pybullet==3.2.6
-python-utils==3.8.2
-requests==2.31.0
-transforms3d==0.4.1
-typing_extensions==4.11.0
-urllib3==2.2.1
+numpy==2.2.4
+numpy-stl==3.2.0
+onshape-to-robot==1.5.7
+pybullet==3.2.7
+python-dotenv==1.1.0
+python-utils==3.9.1
+requests==2.32.3
+transforms3d==0.4.2
+typing_extensions==4.13.2
+urllib3==2.4.0

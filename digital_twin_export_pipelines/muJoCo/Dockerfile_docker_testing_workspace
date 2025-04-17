@@ -1,11 +1,13 @@
-FROM python:3.9-slim
+FROM python:3.13-slim
 
 # Install OpenSCAD (required for simplified collision models)
 RUN apt-get update && apt-get install -y openscad
 
-# Install packages for testing purposes
-RUN apt-get -y install openssh-client
+# Installing vim for file debugging TODO: Remove
 RUN apt-get -y install vim
+
+# Installing various dependencies needed for the python package "numpy" and "scipy"
+RUN apt-get -y install build-essential
 
 # Set the working directory inside the container
 WORKDIR /app
