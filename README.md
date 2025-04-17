@@ -12,7 +12,7 @@
 2. Fill in your OnShape api keys (as shown in the example)
 3. Fill in the name of the input_files folder you want to export (as shown in the example)
 4. Open a terminal in the "digital_twin_export_pipeline" folder
-5. Run this command to start the export: `docker-compose up`
+5. Run this command to start the export: `docker compose up`
 
 ### Result of the export
 

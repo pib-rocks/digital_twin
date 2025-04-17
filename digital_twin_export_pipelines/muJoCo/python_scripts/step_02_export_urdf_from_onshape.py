@@ -1,5 +1,5 @@
 """
-This script creates a MuJoCo-compatible URDF-file from the pib onshape .stl files.
+This script creates a URDF-file from the pib onshape .stl files.
 """
 
 import subprocess

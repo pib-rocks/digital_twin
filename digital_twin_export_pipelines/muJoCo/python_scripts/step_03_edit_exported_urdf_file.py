@@ -1,5 +1,5 @@
 """
-This script prepares the exported URDF file to be used in MuJoCo.
+This script prepares the exported URDF file to be converted into the MJCF format.
 """
 
 import xml.etree.ElementTree as ET
@@ -62,11 +62,11 @@ def apply_xml_formatting(target_xml_path):
 INPUT_FILES_PATH = "/app/onshape-to-robot_input_files/"
 MUJOCO_HEADER_XML_PATH = "/app/python_scripts/mujoco_header.xml"
 ONSHAPE_EXPORT_URDF = INPUT_FILES_PATH + "robot.urdf"
-URDF_WITH_MUJOCO_HEADER = INPUT_FILES_PATH + "mujoco_header.urdf"
-ABSOLUTE_PATH_URDF = INPUT_FILES_PATH + "absolute_path.urdf"
+URDF_WITH_ABSOLUTE_PATHS = INPUT_FILES_PATH + "urdf_with_absolute_paths.urdf"
+URDF_WITH_MUJOCO_HEADER = INPUT_FILES_PATH + "mujoco_file_with_header.urdf"
 
-convert_relative_to_absolute(ONSHAPE_EXPORT_URDF, ABSOLUTE_PATH_URDF, INPUT_FILES_PATH)
-insert_element(MUJOCO_HEADER_XML_PATH, ABSOLUTE_PATH_URDF, URDF_WITH_MUJOCO_HEADER)
+convert_relative_to_absolute(ONSHAPE_EXPORT_URDF, URDF_WITH_ABSOLUTE_PATHS, INPUT_FILES_PATH)
+insert_element(MUJOCO_HEADER_XML_PATH, URDF_WITH_ABSOLUTE_PATHS, URDF_WITH_MUJOCO_HEADER)
 
 
-apply_xml_formatting(ABSOLUTE_PATH_URDF)
+apply_xml_formatting(URDF_WITH_MUJOCO_HEADER)
