@@ -1,0 +1,10 @@
+    <mujoco>
+        <!-- discardvisual is disabled to include both the colliders and the mesh skins -->
+        <!-- fusestatic is disabled to allow collision detection with static parts -->
+        <compiler meshdir="meshes/" discardvisual="false" fusestatic="false"/>
+
+        <!-- filterparent is disabled to allow collision detection between children and parent links -->
+        <option>
+            <flag filterparent="disable"/>
+        </option> 
+    </mujoco>

@@ -43,7 +43,7 @@ INPUT_FILES_DIRECTORY=onshape-to-robot_input_files/pib_upper_body_input_files
 
 ## Testing docker environment 
 
-This repository includes a docker environment for manually testing the export pipeline. The commands below will first build a docker container and then start it, while opening a shell console that allows running commands within the docker container.
+This repository includes a docker environment for manually testing the export pipeline. The commands below will first build a docker container and then start it, while opening a shell console that allows running commands within the docker container. For the usual pipeline functionality an .env file is needed, defining the ONSHAPE_ACCESS_KEY and ONSHAPE_SECRET_KEY variables.
 
 Open a terminal in the "docker_testing_workspace" folder and enter the following commands:  
 `docker build -f Dockerfile_docker_testing_workspace -t docker_testing_workspace .`  
