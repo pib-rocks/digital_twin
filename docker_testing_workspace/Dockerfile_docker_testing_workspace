@@ -1,0 +1,23 @@
+FROM python:3.12
+
+# Install OpenSCAD (required for simplified collision models)
+RUN apt-get update && apt-get install -y openscad
+
+# Install packages for testing purposes
+RUN apt-get -y install openssh-client
+RUN apt-get -y install vim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the python scripts into the container
+COPY python_scripts /app/python_scripts
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r /app/python_scripts/requirements.txt
+
+# Copy the onshape-to-robot config files into the container
+COPY onshape-to-robot_input_files /app/onshape-to-robot_input_files
+
+# Run the shell script that starts the python scripts
+ENTRYPOINT ["/bin/bash"]

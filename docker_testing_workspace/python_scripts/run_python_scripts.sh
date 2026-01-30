@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Exit immediately if any command returns a non-successful exit status
+set -e
+
+# Function to print the current timestamp and a message
+print_timestamp() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1"
+}
+
+# Run python scripts
+print_timestamp "Preparing config file"
+python /app/python_scripts/01_prepare_config_file_for_export.py
+
+print_timestamp "Export urdf"
+python /app/python_scripts/02_export_urdf_from_onshape.py
+
+print_timestamp "Edit urdf file to prepare for conversion"
+python /app/python_scripts/03_edit_exported_urdf_file.py
+
+print_timestamp "Create meshes folder and move stl files"
+python /app/python_scripts/04_move_exported_files.py
+
+print_timestamp "Convert urdf to mjcf"
+python /app/python_scripts/05_convert_urdf_to_mjcf.py

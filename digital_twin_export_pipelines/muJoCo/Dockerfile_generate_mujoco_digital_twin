@@ -1,0 +1,29 @@
+FROM python:3.13-slim
+
+# Set variables from the .env-file as build arguments
+ARG INPUT_FILES_DIRECTORY=${INPUT_FILES_DIRECTORY}
+
+# Install OpenSCAD (required for simplified collision models)
+RUN apt-get update && apt-get install -y openscad
+
+# Installing various dependencies needed for the python package "numpy" and "scipy"
+RUN apt-get -y install build-essential
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the python scripts into the container
+COPY python_scripts /app/python_scripts
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r /app/python_scripts/requirements.txt
+
+# Copy the onshape-to-robot config files into the container
+COPY ${INPUT_FILES_DIRECTORY} /app/onshape-to-robot_input_files
+
+# Copy the entrypoint shell script and make it executable
+COPY docker_entrypoint.sh .
+RUN chmod +x docker_entrypoint.sh
+
+# Run the shell script that starts the python scripts
+ENTRYPOINT ["./docker_entrypoint.sh"]

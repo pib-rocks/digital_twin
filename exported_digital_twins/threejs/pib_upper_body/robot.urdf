@@ -1,0 +1,1140 @@
+<robot name="pib">
+  <link name="base_link" />
+  <joint name="base_link_to_base" type="fixed">
+    <parent link="base_link" />
+    <child link="urdf_body" />
+    <origin rpy="0.0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="urdf_body">
+    <visual>
+      <origin xyz="-0.013132987582171207555 0.012566156500572068372 0.89118743593020444127" rpy="0 -0 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_body.stl" />
+      </geometry>
+      <material name="urdf_body_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.013132987582171207555 0.012566156500572068372 0.89118743593020444127" rpy="0 -0 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_body.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.013148571594045449507 0.0062543835553175051653 0.3419381576095943398" rpy="0 0 0" />
+      <mass value="14.989177057357220946" />
+      <inertia ixx="1.029494562041631367" ixy="1.0181054179696965536e-06" ixz="2.1002630209530245256e-05" iyy="1.0887777211809295252" iyz="-0.0085981070968832885165" izz="0.10550543590082099576" />
+    </inertial>
+  </link>
+  <link name="urdf_head_base">
+    <visual>
+      <origin xyz="0 0 0.096600000000000019185" rpy="3.141592653589793116 9.2158757104467340625e-36 2.5110185680345277928e-20" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_head_base.stl" />
+      </geometry>
+      <material name="urdf_head_base_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.096600000000000019185" rpy="3.141592653589793116 9.2158757104467340625e-36 2.5110185680345277928e-20" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_head_base.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-3.4780229255899788952e-05 0.017377672968967167177 -0.012899139977839313431" rpy="0 0 0" />
+      <mass value="0.27521837874373661359" />
+      <inertia ixx="0.00026904306851896188585" ixy="4.9266012202656701452e-07" ixz="-1.9175035112769709978e-09" iyy="0.00016134789791135667578" iyz="-1.2039857658915472483e-08" izz="0.00039920756811286805697" />
+    </inertial>
+  </link>
+  <link name="urdf_head">
+    <visual>
+      <origin xyz="0.048000000000000007938 0.10950000000000004174 -0.041749999999999995448" rpy="1.570796326794896558 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_head.stl" />
+      </geometry>
+      <material name="urdf_head_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.048000000000000007938 0.10950000000000004174 -0.041749999999999995448" rpy="1.570796326794896558 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_head.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.01073996416762678513 -0.069583846033885038418 -0.041777351562457876177" rpy="0 0 0" />
+      <mass value="0.51196926449630741907" />
+      <inertia ixx="0.0045844295661148079177" ixy="0.00041060125670957478864" ixz="1.9515192922197228546e-06" iyy="0.0035484276005387036662" iyz="1.7292604105789041048e-06" izz="0.0027701060251911222357" />
+    </inertial>
+  </link>
+  <link name="urdf_camera_link">
+    <visual>
+      <origin xyz="-0.00024999999999998807898 0.10823202427590994379 0.09539999999999999869" rpy="1.570796326794896558 2.7161820220310921282e-20 3.4666738998970245355e-33" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_camera_link.stl" />
+      </geometry>
+      <material name="urdf_camera_link_material">
+        <color rgba="0 0 0 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00024999999999998807898 0.10823202427590994379 0.09539999999999999869" rpy="1.570796326794896558 2.7161820220310921282e-20 3.4666738998970245355e-33" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_camera_link.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="2.4047604185728488346e-16 4.1633363423443370266e-17 -0.0015000000000000154269" rpy="0 0 0" />
+      <mass value="0.011584290081750133264" />
+      <inertia ixx="3.2331286532904706572e-07" ixy="2.5149276388741937206e-37" ixz="-3.1009920596271924869e-24" iyy="6.4039677650293885184e-06" iyz="-3.0443518720203934571e-59" izz="6.7099041952358105722e-06" />
+    </inertial>
+  </link>
+  <joint name="camera" type="fixed">
+    <origin xyz="-0.047400000000000011569 0.0012679757240900979554 -0.041999999999999981792" rpy="-0 1.570796326794896558 0" />
+    <parent link="urdf_head" />
+    <child link="urdf_camera_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="head_vertical" type="revolute">
+    <origin xyz="-0.041249999999999995004 0.047999999999999848344 -0.012900000000000355627" rpy="1.570796326794896558 -1.0934874050502107316e-13 -1.5707963267948972241" />
+    <parent link="urdf_head_base" />
+    <child link="urdf_head" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-0.785398163397448279" upper="1.2217304763960306069" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="head_horizontal" type="revolute">
+    <origin xyz="-0.013133585993821467533 0.012566127962098723458 0.98718743593020441551" rpy="3.141592653589793116 1.2652486580063965025e-22 -0.0029026197161880896817" />
+    <parent link="urdf_body" />
+    <child link="urdf_head_base" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_shoulder_vertical">
+    <visual>
+      <origin xyz="-4.7531423241764514387e-16 1.1102230246251565404e-16 -0.0060000000000000053291" rpy="-3.141592653589793116 -1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_vertical.stl" />
+      </geometry>
+      <material name="urdf_shoulder_vertical_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-4.7531423241764514387e-16 1.1102230246251565404e-16 -0.0060000000000000053291" rpy="-3.141592653589793116 -1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_vertical.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-4.7587514123936274422e-16 1.0258652899905169828e-16 0.042642994191431304873" rpy="0 0 0" />
+      <mass value="0.25" />
+      <inertia ixx="0.00072724079589201362679" ixy="2.2527461266371521914e-34" ixz="-1.1690232745453731009e-46" iyy="0.00047340124215038056074" iyz="-6.2960407187033727124e-51" izz="0.00067680797638553576341" />
+    </inertial>
+  </link>
+  <link name="urdf_shoulder_horizontal">
+    <visual>
+      <origin xyz="-2.7755575615628913511e-17 -0.06500000000000000222 -0.037200000000000010836" rpy="-1.570796326794896558 -9.0106482910810717248e-31 1.570796326794896558" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_horizontal.stl" />
+      </geometry>
+      <material name="urdf_shoulder_horizontal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.7755575615628913511e-17 -0.06500000000000000222 -0.037200000000000010836" rpy="-1.570796326794896558 -9.0106482910810717248e-31 1.570796326794896558" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_horizontal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.031415657092109729176 1.2792556056129278375e-08 -0.037199999558260789245" rpy="0 0 0" />
+      <mass value="0.35000000000000003331" />
+      <inertia ixx="0.00037058906386676224642" ixy="1.2826983305938804018e-10" ixz="7.7908665626646070203e-11" iyy="0.00079724647302412338708" iyz="1.228809034118116653e-10" izz="0.00084576167306383393755" />
+    </inertial>
+  </link>
+  <link name="urdf_elbow-upper">
+    <visual>
+      <origin xyz="-0.065000113126188391321 8.9579510653692295818e-07 0.13999999999999995781" rpy="-4.9135083175429525428e-32 7.5474146006728399468e-32 1.9228036076852438825e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-upper.stl" />
+      </geometry>
+      <material name="urdf_elbow-upper_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.065000113126188391321 8.9579510653692295818e-07 0.13999999999999995781" rpy="-4.9135083175429525428e-32 7.5474146006728399468e-32 1.9228036076852438825e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-upper.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-4.4526328484006949537e-07 -0.0056136834333766144969 -0.021290240894863060594" rpy="0 0 0" />
+      <mass value="0.21700098433583236979" />
+      <inertia ixx="0.00020767324075755681009" ixy="-4.6362216441682192595e-10" ixz="-1.1291109162310059319e-09" iyy="0.00032578308552494401407" iyz="-2.9777665381350172777e-05" izz="0.00031634043511068936447" />
+    </inertial>
+  </link>
+  <link name="urdf_elbow-lower">
+    <visual>
+      <origin xyz="-0.13812409200567404843 -0.16782384366109792673 0.027200113126188377177" rpy="2.356194490192344837 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-lower.stl" />
+      </geometry>
+      <material name="urdf_elbow-lower_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.13812409200567404843 -0.16782384366109792673 0.027200113126188377177" rpy="2.356194490192344837 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-lower.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.043032345513961040018 0.015369344989338893856 -0.03780034354696912291" rpy="0 0 0" />
+      <mass value="0.14960335360770107838" />
+      <inertia ixx="0.00022936722111307645817" ixy="-5.4529749402997694838e-06" ixz="-4.3421495042436522185e-09" iyy="0.00024909717114533221722" iyz="1.4345465837876565503e-09" izz="0.00016870950008625071694" />
+    </inertial>
+  </link>
+  <link name="urdf_forearm">
+    <visual>
+      <origin xyz="-0.064741926567294549866 -0.00046870620534822382552 0.3034378600000000592" rpy="-1.0146536358380475329e-17 4.1679871369037325419e-30 6.0838490664050810297e-31" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_forearm.stl" />
+      </geometry>
+      <material name="urdf_forearm_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.064741926567294549866 -0.00046870620534822382552 0.3034378600000000592" rpy="-1.0146536358380475329e-17 4.1679871369037325419e-30 6.0838490664050810297e-31" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_forearm.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0018761096199147175856 -4.4442311041667738128e-07 -0.050267094888194141511" rpy="0 0 0" />
+      <mass value="0.056999999999999995115" />
+      <inertia ixx="0.00018119182777985383859" ixy="-2.0579821296252145328e-10" ixz="7.3610097522744244103e-06" iyy="0.0001718222595446950308" iyz="-2.1213780997304571831e-09" izz="6.8995586508010248584e-05" />
+    </inertial>
+  </link>
+  <link name="urdf_palm_left">
+    <visual>
+      <origin xyz="0.0029999999999999089895 -0.10000000000000008882 -0.18269999999999997353" rpy="1.570796326794896558 1.5707963267948961139 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_palm_left.stl" />
+      </geometry>
+      <material name="urdf_palm_left_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0029999999999999089895 -0.10000000000000008882 -0.18269999999999997353" rpy="1.570796326794896558 1.5707963267948961139 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_palm_left.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0020987363637569402854 -0.041510352722235417666 -0.022975098204294164272" rpy="0 0 0" />
+      <mass value="0.20306541431120292418" />
+      <inertia ixx="0.00025623389388043150451" ixy="-4.7921056972852542826e-07" ixz="-1.9621105672778358366e-06" iyy="8.745445704636622779e-05" iyz="-7.3438149540144077439e-06" izz="0.00019183883445435823416" />
+    </inertial>
+  </link>
+  <link name="urdf_thumb_rotator_left">
+    <visual>
+      <origin xyz="0.088236460769996527542 -0.078348848981385763035 -0.48802748055539579841" rpy="-2.932153143350473723 -1.9857090890457365134e-17 3.141592653589793116" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_thumb_rotator_left.stl" />
+      </geometry>
+      <material name="urdf_thumb_rotator_left_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.088236460769996527542 -0.078348848981385763035 -0.48802748055539579841" rpy="-2.932153143350473723 -1.9857090890457365134e-17 3.141592653589793116" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_thumb_rotator_left.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0025419525965151568148 0.00063582665531475290877 -0.005730676783377131045" rpy="0 0 0" />
+      <mass value="0.019598631427577496017" />
+      <inertia ixx="2.3515796946329461039e-06" ixy="1.5634947145857038346e-07" ixz="-3.8747705154697853598e-07" iyy="2.9068174466283945051e-06" iyz="6.3565590282101407998e-08" izz="1.9521874764506283197e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_proximal">
+    <visual>
+      <origin xyz="-0.081395940769996233399 -0.54244426802548018074 -0.06149543872761764618" rpy="1.7453292519943297556 -3.8081488013159302163e-16 -3.166230612240626938e-17" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996233399 -0.54244426802548018074 -0.06149543872761764618" rpy="1.7453292519943297556 -3.8081488013159302163e-16 -3.166230612240626938e-17" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0023375463259760753676 0.023999998253825483019 -3.4234415441369851735e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878062700638035e-13" ixz="4.3676988702550332252e-13" iyy="8.3091893062354268358e-07" iyz="-6.0838833073018503316e-14" izz="3.2415371409603666462e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal">
+    <visual>
+      <origin xyz="-0.081281787715045794585 -0.59056528241925132505 -0.061495438727617535157" rpy="1.7453292519943297556 -3.2988357042493155855e-16 3.9186454232602242638e-17" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045794585 -0.59056528241925132505 -0.061495438727617535157" rpy="1.7453292519943297556 -3.2988357042493155855e-16 3.9186454232602242638e-17" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0040572256874689266448 0.02462591198955110805 -1.8077329355659088606e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202290783e-06" ixy="4.352332560826231597e-07" ixz="2.281216336543106071e-12" iyy="9.9539225899604690744e-07" iyz="-6.0407081664578021156e-12" izz="3.1902417616991491939e-06" />
+    </inertial>
+  </link>
+  <joint name="thumb_left_distal" type="revolute">
+    <origin xyz="2.2204460492503130808e-16 0.04799999999999980671 -1.1102230246251565404e-16" rpy="2.8556408222797963447e-14 2.5997244083856867612e-14 -2.8498875978383146422e-14" />
+    <parent link="urdf_finger_proximal" />
+    <child link="urdf_finger_distal" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="thumb_left_proximal" type="revolute">
+    <origin xyz="-0.019999999999999656941 0.0013202599999999932445 -0.010564960629476427556" rpy="8.8719762223815456536e-14 1.0471975511965747607 1.5707963267950124653" />
+    <parent link="urdf_thumb_rotator_left" />
+    <child link="urdf_finger_proximal" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="thumb_left_opposition" type="revolute">
+    <origin xyz="0.0098405200000029578733 -0.037730520924623256462 -0.049771355293527830277" rpy="-3.1415926535895826177 -1.3613568165555620659 -1.5707963267949820452" />
+    <parent link="urdf_palm_left" />
+    <child link="urdf_thumb_rotator_left" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_2">
+    <visual>
+      <origin xyz="-0.081395940769996386055 -0.54244426802548006972 -0.061495438727617701691" rpy="1.7453292519943299776 -4.2001897567203978215e-16 -1.9190257254314003313e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996386055 -0.54244426802548006972 -0.061495438727617701691" rpy="1.7453292519943299776 -4.2001897567203978215e-16 -1.9190257254314003313e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0023375463259762280233 0.023999998253825594041 -3.4234415025036213365e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574483243e-13" ixz="4.367698869425832119e-13" iyy="8.3091893062354278945e-07" iyz="-6.0838833254382295483e-14" izz="3.2415371409603662227e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_2">
+    <visual>
+      <origin xyz="-0.081281787715045766829 -0.59056528241925143607 -0.061495438727617507402" rpy="1.7453292519943297556 -2.9755429575730660615e-16 -7.5066567844376037494e-31" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045766829 -0.59056528241925143607 -0.061495438727617507402" rpy="1.7453292519943297556 -2.9755429575730660615e-16 -7.5066567844376037494e-31" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.004057225687468912767 0.024625911989550997028 -1.8077329286270149566e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202273843e-06" ixy="4.35233256082622895e-07" ixz="2.2812163369812230095e-12" iyy="9.9539225899604690744e-07" iyz="-6.0407081662975075992e-12" izz="3.1902417616991491939e-06" />
+    </inertial>
+  </link>
+  <joint name="index_left_distal" type="revolute">
+    <origin xyz="3.4694469519536141888e-17 0.048000000000000042633 5.5511151231257827021e-17" rpy="-3.324356208239393546e-15 1.6538921594855151193e-15 -2.1804436637364752935e-16" />
+    <parent link="urdf_finger_proximal_2" />
+    <child link="urdf_finger_distal_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="index_left_proximal" type="revolute">
+    <origin xyz="0.0029999999999999783784 -0.088617510000000176973 -0.058501980000000064486" rpy="-0.1745329251994194586 1.8889579715396755642e-14 -3.1415926535897042982" />
+    <parent link="urdf_palm_left" />
+    <child link="urdf_finger_proximal_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_3">
+    <visual>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548006972 -0.061495438727617757202" rpy="1.7453292519943299776 -4.2001897567204500835e-16 1.04482459168021899e-29" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548006972 -0.061495438727617757202" rpy="1.7453292519943299776 -4.2001897567204500835e-16 1.04482459168021899e-29" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.002337546325976241901 0.023999998253825483019 -3.4234416135259242126e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574478194e-13" ixz="4.367698869425832119e-13" iyy="8.309189306235425777e-07" iyz="-6.0838832974654414681e-14" izz="3.2415371409603662227e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_3">
+    <visual>
+      <origin xyz="-0.081281787715045752951 -0.59056528241925143607 -0.061495438727617868224" rpy="1.7453292519943299776 -2.9755429575730142925e-16 -3.0787000088041966215e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045752951 -0.59056528241925143607 -0.061495438727617868224" rpy="1.7453292519943299776 -2.9755429575730142925e-16 -3.0787000088041966215e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0040572256874688988892 0.024625911989550997028 -1.8077329619337056954e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202273843e-06" ixy="4.35233256082622895e-07" ixz="2.2812163369917812753e-12" iyy="9.9539225899604690744e-07" iyz="-6.0407081662695611729e-12" izz="3.190241761699150041e-06" />
+    </inertial>
+  </link>
+  <joint name="middle_left_distal" type="revolute">
+    <origin xyz="1.7347234759768070944e-17 0.048000000000000042633 -1.6653345369377348106e-16" rpy="1.3463810269846626224e-16 -1.2246467991472146635e-16 -5.224482656270017819e-14" />
+    <parent link="urdf_finger_proximal_3" />
+    <child link="urdf_finger_distal_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="middle_left_proximal" type="revolute">
+    <origin xyz="0.0029999999999999887867 -0.10000000000000008882 -0.032699999999999895817" rpy="9.5920520884911865247e-15 9.0496059190058095325e-15 -3.1415926535895972727" />
+    <parent link="urdf_palm_left" />
+    <child link="urdf_finger_proximal_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_4">
+    <visual>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548018074 -0.06149543872761764618" rpy="1.7453292519943299776 -4.2001897567205782734e-16 3.9048609708216706743e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548018074 -0.06149543872761764618" rpy="1.7453292519943299776 -4.2001897567205782734e-16 3.9048609708216706743e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.002337546325976241901 0.023999998253825371997 -3.4234415025036213365e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574478194e-13" ixz="4.3676988694258331287e-13" iyy="8.309189306235425777e-07" iyz="-6.0838832974654414681e-14" izz="3.2415371409603666462e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_4">
+    <visual>
+      <origin xyz="-0.081281787715045752951 -0.59056528241925132505 -0.061495438727617701691" rpy="1.7453292519943297556 -2.9755429575731967166e-16 -3.015339048977136201e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045752951 -0.59056528241925132505 -0.061495438727617701691" rpy="1.7453292519943297556 -2.9755429575731967166e-16 -3.015339048977136201e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0040572256874688988892 0.024625911989551219072 -1.8077329494436966684e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202273843e-06" ixy="4.3523325608262294794e-07" ixz="2.2812163369693262297e-12" iyy="9.953922589960471192e-07" iyz="-6.0407081660232463351e-12" izz="3.1902417616991491939e-06" />
+    </inertial>
+  </link>
+  <joint name="ring_left_distal" type="revolute">
+    <origin xyz="3.4694469519536141888e-17 0.047999999999999598543 2.2204460492503130808e-16" rpy="-1.6020705346589860019e-14 2.297017423228871653e-14 -1.2914380517393202562e-15" />
+    <parent link="urdf_finger_proximal_4" />
+    <child link="urdf_finger_distal_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="ring_left_proximal" type="revolute">
+    <origin xyz="0.0030000000000000130729 -0.088617509999999954928 -0.0068980199999999491922" rpy="0.17453292519945140526 -1.8543948038359792389e-14 -3.1415926535897189531" />
+    <parent link="urdf_palm_left" />
+    <child link="urdf_finger_proximal_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_5">
+    <visual>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548018074 -0.061495438727617535157" rpy="1.7453292519943297556 -4.2001897567205023456e-16 -7.4264410085063543329e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548018074 -0.061495438727617535157" rpy="1.7453292519943297556 -4.2001897567205023456e-16 -7.4264410085063543329e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.002337546325976241901 0.023999998253825483019 -3.4234414469924701052e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574478194e-13" ixz="4.367698869425832119e-13" iyy="8.3091893062354268358e-07" iyz="-6.0838832989851637004e-14" izz="3.2415371409603662227e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_5">
+    <visual>
+      <origin xyz="-0.081281787715045766829 -0.59056528241925132505 -0.061495438727617757202" rpy="1.7453292519943299776 -2.9755429575730330279e-16 2.674420200521919382e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045766829 -0.59056528241925132505 -0.061495438727617757202" rpy="1.7453292519943299776 -2.9755429575730330279e-16 2.674420200521919382e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.004057225687468912767 0.024625911989551219072 -1.8077329480559178876e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202273843e-06" ixy="4.3523325608262294794e-07" ixz="2.2812163370036780551e-12" iyy="9.953922589960471192e-07" iyz="-6.0407081660467636292e-12" izz="3.190241761699150041e-06" />
+    </inertial>
+  </link>
+  <joint name="pinky_left_distal" type="revolute">
+    <origin xyz="2.0816681711721685133e-17 0.047999999999999820588 1.1102230246251565404e-16" rpy="-3.2121706937622379582e-15 -1.0106430996146978751e-15 5.5502570472865764083e-14" />
+    <parent link="urdf_finger_proximal_5" />
+    <child link="urdf_finger_distal_5" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="pinky_left_proximal" type="revolute">
+    <origin xyz="0.0030000000000000234812 -0.075546140000000150394 0.015420549999999838553" rpy="0.31415926535898325289 -4.9954602297751344902e-15 -3.1415926535897242822" />
+    <parent link="urdf_palm_left" />
+    <child link="urdf_finger_proximal_5" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="wrist_left" type="revolute">
+    <origin xyz="0.015000000000000004649 0.026000000000000078604 -0.15440000000000031477" rpy="1.5707963267948972241 6.464861359314018359e-14 -3.1415926535897837901" />
+    <parent link="urdf_forearm" />
+    <child link="urdf_palm_left" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-0.52359877559829881566" upper="0.52359877559829881566" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="forearm_left" type="revolute">
+    <origin xyz="0.076438243046265730296 0.046739758236430839489 -0.037799999999999958633" rpy="2.356194490192344837 1.570796326794866582 0" />
+    <parent link="urdf_elbow-lower" />
+    <child link="urdf_forearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="elbow_left" type="revolute">
+    <origin xyz="-0.037900000000001959899 -0.021000000000011564971 -0.076337860000000312688" rpy="3.141592653589793116 1.5707963267948559238 0" />
+    <parent link="urdf_elbow-upper" />
+    <child link="urdf_elbow-lower" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-0.785398163397448279" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="upper_arm_left" type="revolute">
+    <origin xyz="0.14000000000000006883 -1.3877787807814456755e-17 -0.037200000000000010836" rpy="1.57079632679489678 3.1813612276726421548e-14 -1.5707963267948932273" />
+    <parent link="urdf_shoulder_horizontal" />
+    <child link="urdf_elbow-upper" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="shoulder_horizontal_left" type="revolute">
+    <origin xyz="2.2083029849184754312e-15 -0.037495364809998821265 0.059000000000002605915" rpy="1.570796326794896558 -1.5707963267948810149 0" />
+    <parent link="urdf_shoulder_vertical" />
+    <child link="urdf_shoulder_horizontal" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="shoulder_vertical_left" type="revolute">
+    <origin xyz="0.1468670124178287073 0.012565599637333533384 0.83568828976250497664" rpy="1.570796326794896558 6.0840221749458565793e-14 1.570796326794896558" />
+    <parent link="urdf_body" />
+    <child link="urdf_shoulder_vertical" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_shoulder_vertical_2">
+    <visual>
+      <origin xyz="-4.7531423241764514387e-16 1.1102230246251565404e-16 -0.0060000000000000053291" rpy="3.141592653589793116 -1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_vertical.stl" />
+      </geometry>
+      <material name="urdf_shoulder_vertical_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-4.7531423241764514387e-16 1.1102230246251565404e-16 -0.0060000000000000053291" rpy="3.141592653589793116 -1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_vertical.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-4.7587514123936274422e-16 1.0258652899905169828e-16 0.042642994191431304873" rpy="0 0 0" />
+      <mass value="0.25" />
+      <inertia ixx="0.00072724079589201362679" ixy="-4.7814227961275114722e-76" ixz="6.4827304146816968196e-48" iyy="0.00047340124215038056074" iyz="1.1560724345166220946e-47" izz="0.00067680797638553576341" />
+    </inertial>
+  </link>
+  <link name="urdf_shoulder_horizontal_2">
+    <visual>
+      <origin xyz="-2.7755575615628913511e-17 0.06500000000000000222 -0.037199999999999899813" rpy="1.570796326794896558 -1.2703590903905815946e-33 -1.570796326794896558" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_horizontal.stl" />
+      </geometry>
+      <material name="urdf_shoulder_horizontal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.7755575615628913511e-17 0.06500000000000000222 -0.037199999999999899813" rpy="1.570796326794896558 -1.2703590903905815946e-33 -1.570796326794896558" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_shoulder_horizontal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.031415657092109729176 -1.2792556070007066182e-08 -0.037200000441739121404" rpy="0 0 0" />
+      <mass value="0.35000000000000003331" />
+      <inertia ixx="0.00037058906386676224642" ixy="-1.2826983305938806603e-10" ixz="-7.7908665626646070203e-11" iyy="0.00079724647302412382077" iyz="1.2288090341181169115e-10" izz="0.00084576167306383393755" />
+    </inertial>
+  </link>
+  <link name="urdf_elbow-upper_2">
+    <visual>
+      <origin xyz="-0.065000113126188405199 8.9579510653692295818e-07 0.13999999999999998557" rpy="7.885577529504527393e-31 2.9401658066071645095e-30 -2.4651903297231515355e-32" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-upper.stl" />
+      </geometry>
+      <material name="urdf_elbow-upper_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.065000113126188405199 8.9579510653692295818e-07 0.13999999999999998557" rpy="7.885577529504527393e-31 2.9401658066071645095e-30 -2.4651903297231515355e-32" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-upper.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-4.4526328485394728318e-07 -0.0056136834333766144969 -0.021290240894863032839" rpy="0 0 0" />
+      <mass value="0.21700098433583236979" />
+      <inertia ixx="0.00020767324075755681009" ixy="-4.6362216441682192595e-10" ixz="-1.1291109162310059319e-09" iyy="0.00032578308552494401407" iyz="-2.9777665381350172777e-05" izz="0.00031634043511068936447" />
+    </inertial>
+  </link>
+  <link name="urdf_elbow-lower_2">
+    <visual>
+      <origin xyz="-0.13812409200567399292 -0.16782384366109792673 0.027200113126188377177" rpy="2.356194490192344837 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-lower.stl" />
+      </geometry>
+      <material name="urdf_elbow-lower_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.13812409200567399292 -0.16782384366109792673 0.027200113126188377177" rpy="2.356194490192344837 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_elbow-lower.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.043032345513961012262 0.015369344989338867835 -0.03780034354696912291" rpy="0 0 0" />
+      <mass value="0.14960335360770107838" />
+      <inertia ixx="0.00022936722111307643107" ixy="-5.4529749402998059062e-06" ixz="-4.3421495042436513913e-09" iyy="0.0002490971711453321088" iyz="1.4345465837876563435e-09" izz="0.00016870950008625071694" />
+    </inertial>
+  </link>
+  <link name="urdf_forearm_2">
+    <visual>
+      <origin xyz="-0.064741926567294549866 -0.00046870620534839035898 0.30343785999999994818" rpy="1.4488090518385437219e-17 7.0315545966241860655e-30 6.9692727562414142155e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_forearm.stl" />
+      </geometry>
+      <material name="urdf_forearm_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.064741926567294549866 -0.00046870620534839035898 0.30343785999999994818" rpy="1.4488090518385437219e-17 7.0315545966241860655e-30 6.9692727562414142155e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_forearm.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0018761096199147175856 -4.4442311060854172584e-07 -0.050267094888194252533" rpy="0 0 0" />
+      <mass value="0.056999999999999995115" />
+      <inertia ixx="0.00018119182777985383859" ixy="-2.0579821296199539226e-10" ixz="7.3610097522744244103e-06" iyy="0.00017182225954469497659" iyz="-2.1213780997212932627e-09" izz="6.8995586508010248584e-05" />
+    </inertial>
+  </link>
+  <link name="urdf_palm_right">
+    <visual>
+      <origin xyz="-0.078395940769996466657 0.45626438159840421172 -0.025531293794651410689" rpy="-1.570796326794896336 -1.2246467991473492629e-16 1.5170309107986328687e-29" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_palm_right.stl" />
+      </geometry>
+      <material name="urdf_palm_right_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.078395940769996466657 0.45626438159840421172 -0.025531293794651410689" rpy="-1.570796326794896336 -1.2246467991473492629e-16 1.5170309107986328687e-29" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_palm_right.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0020986680458388862203 -0.041510795320826854304 -0.027423536937194480101" rpy="0 0 0" />
+      <mass value="0.20307147221047081032" />
+      <inertia ixx="0.00025624174633100105757" ixy="-4.7993332156486076889e-07" ixz="1.9636296955880420027e-06" iyy="8.746020788826045899e-05" iyz="7.3474968615989089433e-06" izz="0.00019184139974408347855" />
+    </inertial>
+  </link>
+  <link name="urdf_thumb_rotator_right">
+    <visual>
+      <origin xyz="0.015767430045240247993 -0.20176353923000342472 0.1936050527345201111" rpy="-0.20943951023931944855 3.4493602755788141464e-17 -1.570796326794896558" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_thumb_rotator_right.stl" />
+      </geometry>
+      <material name="urdf_thumb_rotator_right_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.015767430045240247993 -0.20176353923000342472 0.1936050527345201111" rpy="-0.20943951023931944855 3.4493602755788141464e-17 -1.570796326794896558" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_thumb_rotator_right.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.00063582435660355929308 -0.0025419533183716480629 0.0057306758962853976413" rpy="0 0 0" />
+      <mass value="0.019598635830411437198" />
+      <inertia ixx="2.906817939103036284e-06" ixy="-1.5634928930020457885e-07" ixz="6.3566028804075893574e-08" iyy="2.3515802423962078887e-06" iyz="3.8747703823404989564e-07" izz="1.9521876419465009579e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_proximal_6">
+    <visual>
+      <origin xyz="-0.081395940769996233399 -0.54244426802548006972 -0.06149543872761764618" rpy="1.7453292519943297556 -3.7573892536736055656e-16 -1.0440412348483917562e-16" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996233399 -0.54244426802548006972 -0.06149543872761764618" rpy="1.7453292519943297556 -3.7573892536736055656e-16 -1.0440412348483917562e-16" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0023375463259760892454 0.023999998253825483019 -3.4234415580147721541e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748355528e-06" ixy="-2.4787878091470736036e-13" ixz="4.3676988724891908073e-13" iyy="8.3091893062354247182e-07" iyz="-6.0838833163298509478e-14" izz="3.2415371409603649521e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_6">
+    <visual>
+      <origin xyz="-0.081281787715046016629 -0.59056528241925143607 -0.06149543872761764618" rpy="1.7453292519943297556 -2.6538587538040077092e-16 1.2760756753365506038e-16" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715046016629 -0.59056528241925143607 -0.06149543872761764618" rpy="1.7453292519943297556 -2.6538587538040077092e-16 1.2760756753365506038e-16" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0040572256874691486894 0.02462591198955110805 -1.8077329438925815452e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202290783e-06" ixy="4.3523325608262347734e-07" ixz="2.2812163368937296766e-12" iyy="9.953922589960471192e-07" iyz="-6.0407081661548569098e-12" izz="3.1902417616991496175e-06" />
+    </inertial>
+  </link>
+  <joint name="thumb_right_distal" type="revolute">
+    <origin xyz="2.2204460492503130808e-16 0.047999999999999966305 1.1102230246251565404e-16" rpy="-3.3353999525834888297e-16 2.1669734911739421234e-15 3.4661413924769046175e-15" />
+    <parent link="urdf_finger_proximal_6" />
+    <child link="urdf_finger_distal_6" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="thumb_right_proximal" type="revolute">
+    <origin xyz="-0.0013202600000000036529 -0.019999999999999962252 0.010564960629476205511" rpy="6.5080097311984353055e-14 -1.0471975511966096217 3.1415926535897114036" />
+    <parent link="urdf_thumb_rotator_right" />
+    <child link="urdf_finger_proximal_6" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="thumb_right_opposition" type="revolute">
+    <origin xyz="0.0098405199999938436362 -0.037730520924611710143 -0.00062864470646378789453" rpy="-1.7802358370341726523 -3.3811772765829473309e-14 2.3535338439382110334e-14" />
+    <parent link="urdf_palm_right" />
+    <child link="urdf_thumb_rotator_right" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_7">
+    <visual>
+      <origin xyz="-0.081395940769996386055 -0.54244426802547995869 -0.061495438727617542096" rpy="1.7453292519943297556 -4.200189756720417543e-16 -2.4051013145507801333e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996386055 -0.54244426802547995869 -0.061495438727617542096" rpy="1.7453292519943297556 -4.200189756720417543e-16 -2.4051013145507801333e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0023375463259762280233 0.023999998253825594041 -3.423441460870257913e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574478194e-13" ixz="4.367698869425832119e-13" iyy="8.3091893062354247182e-07" iyz="-6.083883318976828908e-14" izz="3.2415371409603657991e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_7">
+    <visual>
+      <origin xyz="-0.081281787715045752951 -0.5905652824192515471 -0.061495438727617500463" rpy="1.7453292519943297556 -2.9755429575730532425e-16 -2.732876081367854562e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045752951 -0.5905652824192515471 -0.061495438727617500463" rpy="1.7453292519943297556 -2.9755429575730532425e-16 -2.732876081367854562e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0040572256874688988892 0.024625911989550886005 -1.8077329286270149566e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202273843e-06" ixy="4.35233256082622895e-07" ixz="2.2812163369679881197e-12" iyy="9.9539225899604690744e-07" iyz="-6.0407081663239773788e-12" izz="3.1902417616991496175e-06" />
+    </inertial>
+  </link>
+  <joint name="index_right_distal" type="revolute">
+    <origin xyz="3.1225022567582527699e-17 0.048000000000000486722 2.6367796834847467835e-16" rpy="-5.1475944124730397778e-16 1.220661973083471935e-14 7.4532714080585820157e-15" />
+    <parent link="urdf_finger_proximal_7" />
+    <child link="urdf_finger_distal_7" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="index_right_proximal" type="revolute">
+    <origin xyz="0.0029999999999999679701 -0.088617509999999732884 0.0081019800000001196416" rpy="0.17453292519939317406 3.5281437124290654476e-14 -3.1415926535897891192" />
+    <parent link="urdf_palm_right" />
+    <child link="urdf_finger_proximal_7" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_8">
+    <visual>
+      <origin xyz="-0.081395940769996399933 -0.54244426802547995869 -0.061495438727617618424" rpy="1.7453292519943299776 -4.2001897567203943702e-16 2.6237194088011945149e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996399933 -0.54244426802547995869 -0.061495438727617618424" rpy="1.7453292519943299776 -4.2001897567203943702e-16 2.6237194088011945149e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.002337546325976241901 0.023999998253825705063 -3.423441460870257913e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574483243e-13" ixz="4.3676988694258331287e-13" iyy="8.3091893062354268358e-07" iyz="-6.0838833031351501391e-14" izz="3.2415371409603674932e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_8">
+    <visual>
+      <origin xyz="-0.081281787715045752951 -0.5905652824192515471 -0.061495438727617535157" rpy="1.7453292519943297556 -2.9755429575730507773e-16 1.7075261387298099412e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045752951 -0.5905652824192515471 -0.061495438727617535157" rpy="1.7453292519943297556 -2.9755429575730507773e-16 1.7075261387298099412e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0040572256874688988892 0.024625911989550886005 -1.807732932790351299e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202273843e-06" ixy="4.35233256082622895e-07" ixz="2.2812163369560913399e-12" iyy="9.9539225899604669569e-07" iyz="-6.0407081659276690081e-12" izz="3.1902417616991496175e-06" />
+    </inertial>
+  </link>
+  <joint name="middle_right_distal" type="revolute">
+    <origin xyz="1.0408340855860842566e-17 0.048000000000000042633 1.6653345369377348106e-16" rpy="-6.2232853247157897897e-19 5.3732605057576184558e-30 -6.7513975723387371668e-15" />
+    <parent link="urdf_finger_proximal_8" />
+    <child link="urdf_finger_distal_8" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="middle_right_proximal" type="revolute">
+    <origin xyz="0.0029999999999999818479 -0.099999999999999866773 -0.01770000000000016005" rpy="-4.2024149803030669052e-14 4.2438697975921233628e-14 3.1415926535897820138" />
+    <parent link="urdf_palm_right" />
+    <child link="urdf_finger_proximal_8" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_9">
+    <visual>
+      <origin xyz="-0.081395940769996413811 -0.54244426802548006972 -0.061495438727617535157" rpy="1.7453292519943299776 -4.2001897567203923981e-16 2.4662914875847703629e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996413811 -0.54244426802548006972 -0.061495438727617535157" rpy="1.7453292519943299776 -4.2001897567203923981e-16 2.4662914875847703629e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0023375463259762557788 0.023999998253825594041 -3.423441391481318874e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574473146e-13" ixz="4.3676988694258331287e-13" iyy="8.3091893062354268358e-07" iyz="-6.0838832612161570109e-14" izz="3.2415371409603666462e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_9">
+    <visual>
+      <origin xyz="-0.081281787715045766829 -0.59056528241925143607 -0.061495438727617590668" rpy="1.7453292519943297556 -2.9755429575730024596e-16 -3.3243436025663706491e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045766829 -0.59056528241925143607 -0.061495438727617590668" rpy="1.7453292519943297556 -2.9755429575730024596e-16 -3.3243436025663706491e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0040572256874688988892 0.024625911989550997028 -1.8077329369536876413e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202290783e-06" ixy="4.3523325608262300088e-07" ixz="2.2812163369863739052e-12" iyy="9.9539225899604690744e-07" iyz="-6.0407081664033867176e-12" izz="3.1902417616991491939e-06" />
+    </inertial>
+  </link>
+  <joint name="ring_right_distal" type="revolute">
+    <origin xyz="3.4694469519536141888e-18 0.047999999999999820588 0" rpy="5.1339918948094807059e-15 8.881784197001299655e-16 5.1977788098116910552e-15" />
+    <parent link="urdf_finger_proximal_9" />
+    <child link="urdf_finger_distal_9" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="ring_right_proximal" type="revolute">
+    <origin xyz="0.0030000000000000026645 -0.088617509999999954928 -0.043501979999999745852" rpy="-0.17453292519947671835 3.8002261516555087497e-14 3.1415926535897926719" />
+    <parent link="urdf_palm_right" />
+    <child link="urdf_finger_proximal_9" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <link name="urdf_finger_proximal_10">
+    <visual>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548018074 -0.06149543872761764618" rpy="1.7453292519943297556 -4.2001897567203495038e-16 -2.8000313363868191218e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+      <material name="urdf_finger_proximal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081395940769996399933 -0.54244426802548018074 -0.06149543872761764618" rpy="1.7453292519943297556 -4.2001897567203495038e-16 -2.8000313363868191218e-30" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_proximal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.002337546325976241901 0.023999998253825483019 -3.4234415025036213365e-09" rpy="0 0 0" />
+      <mass value="0.017237431172515048361" />
+      <inertia ixx="3.2796100873748338587e-06" ixy="-2.4787878051574478194e-13" ixz="4.3676988694258331287e-13" iyy="8.3091893062354268358e-07" iyz="-6.0838832948184635079e-14" izz="3.2415371409603674932e-06" />
+    </inertial>
+  </link>
+  <link name="urdf_finger_distal_10">
+    <visual>
+      <origin xyz="-0.081281787715045766829 -0.5905652824192515471 -0.061495438727617535157" rpy="1.7453292519943297556 -3.0034698099855205629e-16 2.8412246017544119747e-18" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+      <material name="urdf_finger_distal_material">
+        <color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.081281787715045766829 -0.5905652824192515471 -0.061495438727617535157" rpy="1.7453292519943297556 -3.0034698099855205629e-16 2.8412246017544119747e-18" />
+      <geometry>
+        <mesh filename="package://pib_upper_body/urdf_finger_distal.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.004057225687468912767 0.024625911989550997028 -1.8077329369536876413e-08" rpy="0 0 0" />
+      <mass value="0.017727854940120885141" />
+      <inertia ixx="3.2103559738202273843e-06" ixy="4.3523325608262294794e-07" ixz="2.2812163369322981843e-12" iyy="9.953922589960471192e-07" iyz="-6.0407081666438288962e-12" izz="3.1902417616991491939e-06" />
+    </inertial>
+  </link>
+  <joint name="pinky_right_distal" type="revolute">
+    <origin xyz="3.4694469519536141888e-18 0.047999999999999820588 2.2204460492503130808e-16" rpy="4.7097590488099390408e-15 -2.7341175143770747997e-15 0.08792892231117173385" />
+    <parent link="urdf_finger_proximal_10" />
+    <child link="urdf_finger_distal_10" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="pinky_right_proximal" type="revolute">
+    <origin xyz="0.0030000000000000096034 -0.075546139999999928349 -0.065820549999999783397" rpy="-0.31415926535902916061 3.4744428729482212075e-14 -3.1415926535897864547" />
+    <parent link="urdf_palm_right" />
+    <child link="urdf_finger_proximal_10" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="0" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="wrist_right" type="revolute">
+    <origin xyz="0.014999999999994311287 0.025000000000002853273 -0.15440000000000897451" rpy="1.5707963267948983344 3.4968296726536841119e-14 -3.1415926535897349403" />
+    <parent link="urdf_forearm_2" />
+    <child link="urdf_palm_right" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-0.52359877559829881566" upper="0.52359877559829881566" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="forearm_right" type="revolute">
+    <origin xyz="0.076438243046265841318 0.046739758236429396199 -0.037799999999992978106" rpy="0.78539816339747214879 -1.5707963267948670261 0" />
+    <parent link="urdf_elbow-lower_2" />
+    <child link="urdf_forearm_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="elbow_right" type="revolute">
+    <origin xyz="-0.037900000000005769352 -0.021000000000001906031 -0.076337860000002255578" rpy="3.1415926535897926719 1.5707963267948887864 0" />
+    <parent link="urdf_elbow-upper_2" />
+    <child link="urdf_elbow-lower_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-0.785398163397448279" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="upper_arm_right" type="revolute">
+    <origin xyz="0.13999999999999987454 0 -0.037199999999999899813" rpy="1.570796326794896558 -4.9789962505504207523e-17 -1.5707963267948903408" />
+    <parent link="urdf_shoulder_horizontal_2" />
+    <child link="urdf_elbow-upper_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="shoulder_horizontal_right" type="revolute">
+    <origin xyz="-1.0859368959614812411e-15 -0.037495364810000930689 0.058999999999997360112" rpy="1.570796326794896558 -1.5707963267948670261 0" />
+    <parent link="urdf_shoulder_vertical_2" />
+    <child link="urdf_shoulder_horizontal_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+  <joint name="shoulder_vertical_right" type="revolute">
+    <origin xyz="-0.1731329875821712716 0.012565756136336671961 0.83568843836869388664" rpy="1.570796326794896558 -0 -1.570796326794896558" />
+    <parent link="urdf_body" />
+    <child link="urdf_shoulder_vertical_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558" />
+    <joint_properties friction="0.0" />
+  </joint>
+</robot>
